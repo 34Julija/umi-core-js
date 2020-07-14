@@ -7,8 +7,10 @@
 </h1>
 
 <p align="center">
-  <!-- build      --><a href="https://travis-ci.org/umi-top/umi-core-js"><img alt="travis" src="https://img.shields.io/travis/umi-top/umi-core-js/master"></a>
-  <!-- coverage   --><img alt="Coveralls github branch" src="https://img.shields.io/coveralls/github/umi-top/umi-core-js/master">
+  <!-- build      --><a href="https://travis-ci.org/umi-top/umi-core-js"><img alt="travis" src="https://travis-ci.com/umi-top/umi-core-js.svg?branch=master"></a>
+  <!-- Scrutinizer--><a href="https://scrutinizer-ci.com/g/umi-top/umi-core-js/?branch=master"><img alt="Scrutinizer Code Quality" src="https://scrutinizer-ci.com/g/umi-top/umi-core-js/badges/quality-score.png?b=master"></a>
+  <!-- codacy     --><a href="https://www.codacy.com/manual/umi-top/umi-core-js"><img src="https://app.codacy.com/project/badge/Grade/2d37d5cfdfad455890411339b7558d61"/></a>
+  <!-- coverage   --><a href='https://coveralls.io/github/umi-top/umi-core-js?branch=master'><img src='https://coveralls.io/repos/github/umi-top/umi-core-js/badge.svg?branch=master' alt='Coverage Status'></a>
   <!-- code style --><a href="https://standardjs.com"><img alt="Standard" src="https://img.shields.io/badge/code_style-standard-green"></a>
   <!-- license    --><a href="https://github.com/umi-top/umi-core-js/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/umi-top/umi-core-js"></a>
   <!-- PGP        --><a href="https://keybase.io/umitop"><img alt="Keybase PGP" src="https://img.shields.io/keybase/pgp/umitop"></a>
