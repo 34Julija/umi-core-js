@@ -17,7 +17,7 @@
   <br/>
   <!-- release    --><a href="https://github.com/umi-top/umi-core-js"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/umi-top/umi-core-js?sort=semver"></a>
   <!-- npm ver    --><a href="https://www.npmjs.com/package/@umi-top/umi-core-js"><img alt="npm version" src="https://img.shields.io/npm/v/@umi-top/umi-core-js"></a>
-  <!-- types      --><img alt="npm type definitions" src="https://img.shields.io/npm/types/@umi-top/umi-core-js">
+  <!-- types      --><a href="https://www.npmjs.com/package/@umi-top/umi-core-js"><img alt="npm type definitions" src="https://img.shields.io/badge/types-Flow%20%7C%20TypeScript-blue"></a>
   <!-- node       --><a href="https://www.npmjs.com/package/@umi-top/umi-core-js"><img alt="node-current (scoped)" src="https://img.shields.io/node/v/@umi-top/umi-core-js"></a>
   <!-- downloads  --><a href="https://www.npmjs.com/package/@umi-top/umi-core-js"><img alt="npm downloads" src="https://img.shields.io/npm/dm/@umi-top/umi-core-js"></a>
 </p>
