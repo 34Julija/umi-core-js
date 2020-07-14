@@ -1,0 +1,9 @@
+---
+exclude_paths:
+  - 'lib/**'
+  - 'test/**'
+  - 'src/**'
+  - 'docs/**'
+  - 'jsdoc.json'
+  - 'package.json'
+  - 'rollup.config.js'

@@ -1,27 +1,80 @@
 {
   "name": "@umi-top/umi-core-js",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "UMI Core JS Library",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
-  "scripts": {},
+  "license": "MIT",
+  "author": {
+    "name": "UMI",
+    "email": "dev@umi.top",
+    "url": "https://umi.top"
+  },
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "es2015": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "unpkg": "lib/index.min.js",
+  "exports": {
+    ".": {
+      "require": "lib/index.js",
+      "import": "lib/index.mjs"
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=4"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "nyc --reporter=text --reporter=html mocha --recursive",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "docs": "jsdoc --pedantic -c jsdoc.json",
+    "lint": "eslint src/**/*.ts dist/**/*.js lib/index.js lib/index.mjs; remark . examples"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/umi-top/umi-core-js"
   },
   "keywords": [
-    "UMI"
+    "UMI",
+    "umi.top"
   ],
-  "author": "Umi Dev <dev@umi.top>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/umi-top/umi-core-js/issues"
   },
-  "homepage": "https://github.com/umi-top/umi-core-js#readme",
-  "dependencies": {
-    "bech32": "^1.1.3",
-    "bip39": "^3.0.2",
-    "sha3": "^2.1.2",
-    "tweetnacl": "^1.0.3"
-  }
+  "homepage": "https://umi-top.github.io/umi-core-js/",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "better-docs": "^2.3.0",
+    "chai": "^4",
+    "eslint": "^7.4.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-compat": "^3.8.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "flowgen": "^1.11.0",
+    "jsdoc": "^3.6.4",
+    "mocha": "^8",
+    "nyc": "^15",
+    "remark-cli": "^8.0.0",
+    "remark-lint": "^7.0.1",
+    "remark-preset-lint-markdown-style-guide": "^3.0.1",
+    "rollup": "^2.21.0",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "standard": "^14.3.4",
+    "typescript": "^3.9.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ]
 }

@@ -1,0 +1,26 @@
+checks:
+  javascript: true
+build:
+  environment:
+    node: v10.14.2
+  nodes:
+    analysis:
+      dependencies:
+        override:
+          - true
+      tests:
+        override:
+          - js-scrutinizer-run
+    tests:
+      dependencies:
+        override:
+          - npm install nyc@^15 mocha@^8 chai@^4
+      tests:
+        override:
+          - command: npx nyc --reporter=clover mocha --recursive
+            coverage:
+              file: coverage/clover.xml
+              format: clover
+filter:
+  paths:
+    - dist/
