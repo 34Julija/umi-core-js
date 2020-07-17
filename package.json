@@ -1,6 +1,6 @@
 {
   "name": "@umi-top/umi-core-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UMI Core JS Library",
   "license": "MIT",
   "author": {
@@ -9,15 +9,15 @@
     "url": "https://umi.top"
   },
   "type": "commonjs",
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
-  "es2015": "lib/index.mjs",
-  "types": "lib/index.d.ts",
-  "unpkg": "lib/index.min.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "es2015": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "unpkg": "./lib/index.min.js",
   "exports": {
     ".": {
-      "require": "lib/index.js",
-      "import": "lib/index.mjs"
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
     }
   },
   "sideEffects": false,

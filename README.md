@@ -57,7 +57,7 @@
 ## Введение
 
 Библиотека написана на [TypeScript](https://www.typescriptlang.org) и
-скомпилирована в модули CommonJS и ES Module и работает
+скомпилирована в модули CommonJS и ES Module. Работает
 во всех актуальных браузерах и Node.js.  
 Для совместимости с устаревшими браузерами скомпилирована iife версия,
 поддерживается Internet Explorer 5 и выше.
@@ -84,7 +84,7 @@ yarn add @umi-top/umi-core-js
 CommonJS: [index.js](https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.js),
 ES Module: [index.mjs](https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.mjs)
 или IIFE [index.min.js](https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.min.js).  
-Так же можно скачать аннотации типов для
+Также можно скачать аннотации типов для
 TypeScript: [index.d.ts](https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.d.ts)
 и Flow: [index.js.flow](https://raw.githubusercontent.com/umi-top/umi-core-js/master/index.js.flow).
 
@@ -144,7 +144,7 @@ import * as umi from 'https://unpkg.com/@umi-top/umi-core-js/lib/index.mjs'
 
 UMI не накладывает никаких ограничений на способ генерации и хранения приватных
 ключей.  
-Для совместимости, рекомендуем использовать
+Для совместимости рекомендуем использовать
 [bip39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 
 #### Seed из мнемонической фразы
@@ -163,7 +163,7 @@ const seed = bip39.mnemonicToSeedSync(mnemonic)
 
 В UMI применяется [Ed25519](https://ed25519.cr.yp.to)
 ([RFC 8032](https://tools.ietf.org/html/rfc8032)) —
-схема подписи [EdDSA](https://ru.wikipedia.org/wiki/EdDSA) использующая
+схема подписи [EdDSA](https://ru.wikipedia.org/wiki/EdDSA), использующая
 [SHA-512](https://en.wikipedia.org/wiki/SHA-2)
 и [Curve25519](https://en.wikipedia.org/wiki/Curve25519). 
 
@@ -180,7 +180,7 @@ const publicKey = secretKey.getPublicKey()
 #### Подписать сообщение
 
 В метод `SecretKey#sign()` необходимо передать массив байтов, поэтому если
-требуется подписать текстовое сообщение его нужно преобразовать:
+требуется подписать текстовое сообщение, его нужно преобразовать:
 
 ```javascript
 const message = umi.textEncode('Hello World')
@@ -192,7 +192,7 @@ console.log(umi.base64Encode(signature))
 #### Проверить подпись
 
 Метод `PublicKey#verifySignature()` принимает массив байтов, поэтому если
-подпись передается в виде текста ее необходимо декодировать:
+подпись передается в виде текста, ее необходимо декодировать:
 
 ```javascript
 const address = 'umi18d4z00xwk6jz6c4r4rgz5mcdwdjny9thrh3y8f36cpy2rz6emg5s6rxnf6'
@@ -217,7 +217,7 @@ UMI использует адреса в формате Bech32
 
 #### Адрес в формате Bech32
 
-Создать адрес из строки Bech32 можно используя статический метод `Address.fromBech32()`
+Создать адрес из строки Bech32 можно, используя статический метод `Address.fromBech32()`,
 и экспортировать с помощью `Address#getBech32()`:
 
 ```javascript

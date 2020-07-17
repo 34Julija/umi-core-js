@@ -198,7 +198,7 @@
 </ul>
 <h2 id="%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5">Введение</h2>
 <p>Библиотека написана на <a href="https://www.typescriptlang.org">TypeScript</a> и
-скомпилирована в модули CommonJS и ES Module и работает
+скомпилирована в модули CommonJS и ES Module. Работает
 во всех актуальных браузерах и Node.js.<br>
 Для совместимости с устаревшими браузерами скомпилирована iife версия,
 поддерживается Internet Explorer 5 и выше.</p>
@@ -218,7 +218,7 @@
 CommonJS: <a href="https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.js">index.js</a>,
 ES Module: <a href="https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.mjs">index.mjs</a>
 или IIFE <a href="https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.min.js">index.min.js</a>.<br>
-Так же можно скачать аннотации типов для
+Также можно скачать аннотации типов для
 TypeScript: <a href="https://raw.githubusercontent.com/umi-top/umi-core-js/master/lib/index.d.ts">index.d.ts</a>
 и Flow: <a href="https://raw.githubusercontent.com/umi-top/umi-core-js/master/index.js.flow">index.js.flow</a>.</p>
 <h2 id="%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Подключение</h2>
@@ -254,7 +254,7 @@ import * as umi from 'https://unpkg.com/@umi-top/umi-core-js/lib/index.mjs'
 <h3 id="%D0%BC%D0%BD%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8">Мнемоники</h3>
 <p>UMI не накладывает никаких ограничений на способ генерации и хранения приватных
 ключей.<br>
-Для совместимости, рекомендуем использовать
+Для совместимости рекомендуем использовать
 <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">bip39</a>.</p>
 <h4 id="seed-%D0%B8%D0%B7-%D0%BC%D0%BD%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9-%D1%84%D1%80%D0%B0%D0%B7%D1%8B">Seed из мнемонической фразы</h4>
 <p>Пример с использованием библиотеки <a href="https://www.npmjs.com/package/bip39">bip39</a>:</p>
@@ -267,7 +267,7 @@ const seed = bip39.mnemonicToSeedSync(mnemonic)
 <h3 id="%D0%BA%D0%BB%D1%8E%D1%87%D0%B8">Ключи</h3>
 <p>В UMI применяется <a href="https://ed25519.cr.yp.to">Ed25519</a>
 (<a href="https://tools.ietf.org/html/rfc8032">RFC 8032</a>) —
-схема подписи <a href="https://ru.wikipedia.org/wiki/EdDSA">EdDSA</a> использующая
+схема подписи <a href="https://ru.wikipedia.org/wiki/EdDSA">EdDSA</a>, использующая
 <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-512</a>
 и <a href="https://en.wikipedia.org/wiki/Curve25519">Curve25519</a>.</p>
 <h4 id="%D0%BA%D0%BB%D1%8E%D1%87-%D0%B8%D0%B7-seed">Ключ из seed</h4>
@@ -278,7 +278,7 @@ const publicKey = secretKey.getPublicKey()
 </code></pre>
 <h4 id="%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5">Подписать сообщение</h4>
 <p>В метод <code>SecretKey#sign()</code> необходимо передать массив байтов, поэтому если
-требуется подписать текстовое сообщение его нужно преобразовать:</p>
+требуется подписать текстовое сообщение, его нужно преобразовать:</p>
 <pre class="prettyprint source lang-javascript"><code>const message = umi.textEncode('Hello World')
 const signature = secretKey.sign(message)
 
@@ -286,7 +286,7 @@ console.log(umi.base64Encode(signature))
 </code></pre>
 <h4 id="%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8C">Проверить подпись</h4>
 <p>Метод <code>PublicKey#verifySignature()</code> принимает массив байтов, поэтому если
-подпись передается в виде текста ее необходимо декодировать:</p>
+подпись передается в виде текста, ее необходимо декодировать:</p>
 <pre class="prettyprint source lang-javascript"><code>const address = 'umi18d4z00xwk6jz6c4r4rgz5mcdwdjny9thrh3y8f36cpy2rz6emg5s6rxnf6'
 const message = umi.textEncode('Hello World')
 const signature = umi.base64Decode(
@@ -305,7 +305,7 @@ console.log(isValid ? 'true' : 'false')
 в Genesis-блоке, такие адреса имеют длину 65 символов
 и всегда имеют префикс <code>genesis</code>.</p>
 <h4 id="%D0%B0%D0%B4%D1%80%D0%B5%D1%81-%D0%B2-%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B5-bech32">Адрес в формате Bech32</h4>
-<p>Создать адрес из строки Bech32 можно используя статический метод <code>Address.fromBech32()</code>
+<p>Создать адрес из строки Bech32 можно, используя статический метод <code>Address.fromBech32()</code>,
 и экспортировать с помощью <code>Address#getBech32()</code>:</p>
 <pre class="prettyprint source lang-javascript"><code>const bech32 = 'umi18d4z00xwk6jz6c4r4rgz5mcdwdjny9thrh3y8f36cpy2rz6emg5s6rxnf6'
 const address = umi.Address.fromBech32(bech32)
